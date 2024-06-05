@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/reset.css">
+    <link rel="stylesheet" href="./dist/style.css">
+    <title>Thanks for subscribing</title>
+</head>
+<body>
+    <main>
+        <div class="success success-width">
+
+            <div class="success__checkmark">
+                <img src="./assets/images/icon-success.svg" alt="">
+            </div>
+            <h1 class="success__heading">
+                Thanks for subscribing!
+            </h1>
+            <p class="success__description">
+                A confirmation email has been sent to <span class="email-used">ash@loremcompany.com</span>. 
+                Please open it and click the button inside to confirm your subscription.
+            </p>
+            <a class="success__dismiss-btn" href="./index.html">Dismiss message</a>
+        
+        </div>
+    </main>
+    <script>
+        let successEmail = document.querySelector(".email-used");
+        document.addEventListener("DOMContentLoaded",()=>{
+            let emailUsed = localStorage.getItem('userEmail');
+            if(emailUsed){
+                successEmail.textContent = emailUsed;
+            }else{
+                successEmail.textContent = " No email found";
+            }
+        })
+    </script>
+</body>
+</html>

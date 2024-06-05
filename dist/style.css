@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(234, 29%, 20%);
+  font-family: "Roboto", sans-serif;
+}
+
+.max-width, footer {
+  min-width: 375px;
+}
+
+.section-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.border {
+  border: 5px solid red;
+}
+
+.container {
+  background-color: hsl(0, 0%, 100%);
+}
+.container__image-container img {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.container__login-info {
+  padding: 1rem;
+}
+.container__login-info--heading {
+  margin-bottom: 1rem;
+}
+.container__login-info--description {
+  margin-bottom: 1.5rem;
+}
+.container__login-info .flex {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.container__login-info .flex__guarantee {
+  line-height: 1.5rem;
+}
+.container__login-info .final {
+  margin-bottom: 2.5rem;
+}
+.container__login-info .form-container__form .label__error {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+.container__login-info .form-container__form input[type=email] {
+  padding: 1.3rem;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid hsl(231, 7%, 60%);
+  margin-bottom: 2rem;
+}
+.container__login-info .form-container__form .submit-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.3rem;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(234, 29%, 20%);
+}
+.container__login-info .form-container__form .submit-btn:hover {
+  background-color: hsl(4, 100%, 67%);
+  cursor: pointer;
+}
+.container__login-info .form-container__form input[type=email]:hover {
+  cursor: pointer;
+}
+.container__login-info .form-container__form input[type=email]:focus {
+  outline: none;
+  border: 2px solid hsl(231, 7%, 60%);
+}
+
+.container__login-info--heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+}
+.container__login-info--description {
+  font-size: 1rem;
+  font-weight: 400;
+  color: hsl(234, 29%, 20%);
+}
+.container__login-info .flex__guarantee {
+  font-size: 1rem;
+  color: hsl(234, 29%, 20%);
+}
+.container__login-info .form-container__form .label__error label, .container__login-info .form-container__form .label__error .error-message {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.container__login-info .form-container__form .label__error .error-message {
+  color: rgb(233, 143, 139) !important;
+}
+.container__login-info .form-container__form input[type=email]::-moz-placeholder {
+  color: hsl(231, 7%, 60%);
+}
+.container__login-info .form-container__form input[type=email]::placeholder {
+  color: hsl(231, 7%, 60%);
+}
+.container__login-info .form-container__form .submit-btn {
+  color: white;
+  font-weight: 700;
+}
+.container__login-info .form-container__form .email::-moz-placeholder {
+  color: rgb(233, 143, 139) !important;
+}
+.container__login-info .form-container__form .email::placeholder {
+  color: rgb(233, 143, 139) !important;
+}
+.container__login-info .form-container__form .email {
+  color: rgb(233, 143, 139) !important;
+  border: 1px solid rgb(233, 143, 139) !important;
+  background-color: #fee9e6;
+}
+
+@media (min-width: 600px) {
+  .max-width, footer {
+    max-width: 58rem;
+    width: 100%;
+  }
+  .container, footer {
+    margin: 0 auto;
+  }
+  .container {
+    border-radius: 20px;
+  }
+  main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .container__login-info {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 2rem 2rem 3rem;
+  }
+  .container__image-container {
+    grid-column: 2/3;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 600px) and (max-width: 820px) {
+  .container__image-container .the-image img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 120%;
+       object-position: 120%;
+  }
+}
+@media (min-width: 930px) {
+  .container__login-info--heading {
+    font-size: 3.5em;
+  }
+}
+@media (min-width: 733px) and (max-width: 929px) {
+  .container__login-info--heading {
+    font-size: 2.5em;
+  }
+}
+@media (min-width: 635px) and (max-width: 732px) {
+  .container__login-info--heading {
+    font-size: 2em;
+  }
+}
+@media (min-width: 600px) and (max-width: 634px) {
+  .container__login-info--heading {
+    font-size: 1.5em;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.success-width {
+  min-width: 375px;
+  background-color: hsl(0, 0%, 100%);
+  min-height: 100vh;
+}
+
+.success {
+  padding: 5rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+.success__dismiss-btn {
+  position: absolute;
+  bottom: 2rem;
+  width: 80%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 1.3rem;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.success__heading {
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  font-size: 2rem;
+}
+.success__description {
+  color: hsl(234, 29%, 20%);
+}
+.success__description .email-used {
+  font-weight: 700;
+}
+
+@media (min-width: 500px) {
+  .success-width {
+    max-width: 480px;
+    width: 100%;
+    min-height: auto;
+  }
+  .success {
+    padding: 3rem 2rem 3rem 2rem;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .success__heading {
+    font-size: 2.5rem;
+  }
+  .success__dismiss-btn {
+    position: static;
+    margin: 0;
+    width: 100%;
+  }
+  .success__dismiss-btn:hover {
+    background-color: hsl(4, 100%, 67%);
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=style.css.map */
